@@ -1,0 +1,31 @@
+{
+	"name": "social-media",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"build-client": "cd client   && npm install && npm run build",
+		"build-server": "cd server   && npm install && npm run build",
+		"server": "npm start --prefix server",
+		"client": "npm start --prefix client",
+		"socket": "npm start --prefix socket",
+		"start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" \"npm run socket\"",
+		"setup-production": "npm run build-client && npm run build-server && npm install"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/anandamideShakyan/Social-media.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/anandamideShakyan/Social-media/issues"
+	},
+	"homepage": "https://github.com/anandamideShakyan/Social-media#readme",
+	"dependencies": {
+		"concurrently": "^7.6.0"
+	}
+}
