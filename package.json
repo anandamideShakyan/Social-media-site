@@ -9,11 +9,12 @@
 	"scripts": {
 		"build-client": "cd client   && npm install && npm run build",
 		"build-server": "cd server   && npm install ",
+		"install-socket": "cd socket && npm install",
 		"server": "npm start --prefix server",
 		"client": "npm start --prefix client",
 		"socket": "npm start --prefix socket",
 		"start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" \"npm run socket\"",
-		"setup-production": "npm run build-client && npm run build-server && npm install"
+		"setup-production": "npm run build-client && npm run build-server  && npm install-socket && npm install"
 	},
 	"repository": {
 		"type": "git",
